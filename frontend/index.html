@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionTeacher AI - GitLab Hackathon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>VisionTeacher AI</h1>
+      <p>AI Coding Tutor • README Writer • GitLab Task Generator</p>
+    </header>
+
+    <section class="card">
+      <label for="task">Task type</label>
+      <select id="task">
+        <option value="bug_fix">Bug fix</option>
+        <option value="explain_code">Code explanation</option>
+        <option value="write_readme">Write README</option>
+        <option value="generate_issues">Generate GitLab issues</option>
+        <option value="analyze_image">Analyze image / diagram</option>
+      </select>
+
+      <label for="userText">Question or task</label>
+      <textarea id="userText" placeholder="Example: Check this Python code, find bugs and generate a GitLab issue checklist"></textarea>
+
+      <label for="repoUrl">GitLab repository URL</label>
+      <input
+        type="text"
+        id="repoUrl"
+        placeholder="Example: https://gitlab.com/"
+      />
+
+      <label for="fileInput">Upload file</label>
+      <input type="file" id="fileInput" />
+
+      <button id="analyzeBtn">Analyze</button>
+    </section>
+
+    <section class="card">
+      <h2>Result</h2>
+      <pre id="result">No result yet...</pre>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
